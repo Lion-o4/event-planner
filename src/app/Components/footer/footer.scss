@@ -1,0 +1,32 @@
+.all-footer{
+    display:flex;
+    margin-left: 56px;
+  margin-right: 155px;
+  margin-top: 0px;
+  border-top-width: 9px;
+  border-top-style: solid;
+  border-right-width: 9px;
+  border-right-style: solid;
+  border-bottom-width: 9px;
+  border-bottom-style: solid;
+  border-left-width: 9px;
+  border-left-style: solid;
+  background-color: blanchedalmond;
+  margin-left: 0px;
+  margin-right: 0px;
+  .quick-links{
+    margin-left: 65px;
+  margin-right: 33px;
+  }
+}
+:host {
+    position: fixed;
+    bottom: 200;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #f0f0f0;
+    z-index: 1000;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    top: 560px;
+  }
