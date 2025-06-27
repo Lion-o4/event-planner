@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-event-card',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './event-card.scss'
 })
 export class EventCard {
-
+@Input() eventDetail={id:1,eventName:"hi",dateTime:"djdndj",imageLink:"public/pands.jpeg"};
 }
