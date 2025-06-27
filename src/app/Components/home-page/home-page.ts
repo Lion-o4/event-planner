@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { EventCard } from '../../reusable components/event-card/event-card';
-import { Newevent } from '../newevent/newevent';
+import { Newevent } from '../../reusable components/newevent/newevent';
 @Component({
   selector: 'app-home-page',
   imports: [EventCard, Newevent ,],
