@@ -1,4 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-body{
+
+/* app.component.css or your layout CSS */
+body {
+    display: flex;
     margin: 0;
-}
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  
+  

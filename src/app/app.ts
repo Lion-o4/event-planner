@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './Components/header/header';
 import { Footer } from './Components/footer/footer';
-
+import { EventCard } from './reusable components/event-card/event-card';
 @Component({
   selector: 'app-root',
-  imports: [Header,RouterOutlet,Footer,],
+  imports: [Header,RouterOutlet,Footer],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

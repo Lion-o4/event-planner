@@ -1,4 +1,22 @@
 <div class="home-container">
-  <p>home-page works!</p>
-  <h1>Mu to Bhungra khava gayi thi</h1>
+  <div class="main-head">
+    <h1 class="head">EVENTS AND WORKSHOPS</h1>
+  </div>
+  <div class="button">
+    <button>all</button>
+    <button>events</button>
+    <button>workshop</button>
+    <button>panel</button>
+  </div>
+  <div class="calender">
+    <button>grid</button>
+    <button>calender</button>
+  </div>
 </div>
+<div class="forloop">
+  @for(item of featuredEventsArr;track item.id){
+  <app-event-card [eventDetail]="item"></app-event-card>
+
+  }
+</div>
+<app-newevent></app-newevent>
