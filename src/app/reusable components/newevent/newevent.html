@@ -1,21 +1,13 @@
 <body>
   <div class="event-card">
     <div class="card-image">
-      <img src="image.jpg" alt="Event Image" />
-      <span class="label">WORKSHOP</span>
+      <img [src]="newdetails.imageLink" alt="Event Image" />
+      <span class="label">{{newdetails.label}}</span>
     </div>
     <div class="card-content">
-      <h2>Creative Typography Workshop</h2>
-      <p class="time">Nov 15, 2:00 PM</p>
-      <p class="location">Digital Arts Studio, Room 302</p>
-      <div class="progress-bar">
-        <div class="progress"></div>
-      </div>
-      <p class="attendees">18/25 attendees</p>
+      <h2>{{newdetails.eventName}}</h2>
+      <p class="time">{{newdetails.dateTime}}</p>
+      <p class="location">newdetails.Digital Arts Studio, Room 302</p>
     </div>
   </div>
-  <img
-    src="https://via.placeholder.com/350x200.png?text=Workshop+Image"
-    alt="Event Image"
-  />
 </body>

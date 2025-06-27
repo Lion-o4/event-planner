@@ -19,4 +19,8 @@
 
   }
 </div>
-<app-newevent></app-newevent>
+<div class="forloop2">
+  @for(item of newEventArr;track item.id){
+  <app-newevent [newdetails]="item"></app-newevent>
+  }
+</div>
