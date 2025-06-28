@@ -33,5 +33,17 @@
 .forloop{
   display: flex;
 }
+.forloop2{
+  display: grid;
+ 
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3rem;
+  margin: 5rem;
+
+  app-newevent{
+    width:400px;
+  }
+  
+}
 
 
