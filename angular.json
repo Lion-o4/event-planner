@@ -57,7 +57,8 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "event-planner:build:production"
+              "buildTarget": "event-planner:build:production",
+              "baseHref": "/event-planner/"
             },
             "development": {
               "buildTarget": "event-planner:build:development"
