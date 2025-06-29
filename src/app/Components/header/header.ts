@@ -19,6 +19,6 @@ export class Header {
   }
 
   GoToContactPage() {
-    this.router.navigate(['contact']);
+    this.router.navigate(['Bucket-List']);
   }
 }
