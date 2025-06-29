@@ -29,4 +29,4 @@ jobs:
         with:
           branch: gh-pages # Deployment branch
           token: ${{ secrets.GITHUB_TOKEN }}
-          folder: dist/event-planner # Replace with your actual output folder
+          folder: dist/event-planner/browser # Replace with your actual output folder
