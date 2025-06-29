@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Build Angular app
-        run: npm run build -- --configuration=production
+        run: ng build --configuration=production --base-href=/event-planner/
 
       - name: Copy index.html to 404.html
         run: cp dist/event-planner/browser/index.html dist/event-planner/browser/404.html
@@ -30,6 +30,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages # Deployment branch
-          token: ${{ secrets.GITHUB_TOKEN }}
-          folder: dist/event-planner/browser # Replace with your actual output folder
+          branch: gh-pages
+          folder: dist/event-planner/browser
