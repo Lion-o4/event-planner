@@ -1,26 +1,57 @@
 <div class="home-container">
-  <div class="main-head">
-    <h1 class="head">EVENTS AND WORKSHOPS</h1>
-  </div>
-  <div class="button">
-    <button>all</button>
-    <button>events</button>
-    <button>workshop</button>
-    <button>panel</button>
-  </div>
-  <div class="calender">
-    <button>grid</button>
-    <button>calender</button>
+  <h1 class="head">EVENTS AND WORKSHOPS</h1>
+  <div class="btn1">
+    <div class="button">
+      <button
+        [class.btn-sel]="eventFilterSelected==='All'"
+        [class.btn-not]="eventFilterSelected!=='All'"
+        (click)="eventTypeArr('All')"
+      >
+        All
+      </button>
+      @for(item of labelArr;track item){
+      <button
+        class="btn-not"
+        [class.btn-sel]="eventFilterSelected===item"
+        [class.btn-not]="eventFilterSelected!==item"
+        (click)="eventTypeArr(item)"
+      >
+        {{item|titlecase}}
+      </button>
+
+      }
+    </div>
+    <div class="calender">
+      <button
+        [class.layout-selected]=" layoutSelected==='Grid'"
+        [class.layout-unselected]="layoutSelected!=='Grid'"
+        (click)="layoutcall('Grid')"
+      >
+        Grid
+      </button>
+      <button
+        [class.layout-selected]="layoutSelected==='List'"
+        [class.layout-unselected]="layoutSelected!=='List'"
+        (click)="layoutcall('List')"
+      >
+        List
+      </button>
+    </div>
   </div>
 </div>
+<h2 class="events">Featured Events</h2>
+
 <div class="forloop">
   @for(item of featuredEventsArr;track item.id){
   <app-event-card [eventDetail]="item"></app-event-card>
 
   }
 </div>
+
+@if(layoutSelected==='Grid'){
 <div class="forloop2">
   @for(item of newEventArr;track item.id){
   <app-newevent [newdetails]="item"></app-newevent>
   }
 </div>
+}

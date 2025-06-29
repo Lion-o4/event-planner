@@ -1,33 +1,74 @@
 .header-container{
-    display: flex;
-  justify-content: flex-start;
-  margin-left: 0px;
-  border-top-width: 5px;
-  border-top-style: solid;
-  border-left-width: 5px;
-  border-left-style: solid;
-  border-right-width: 5px;
-  border-right-style: solid;
-  margin-bottom: 5px;
-  border-bottom-width: 5px;
-  border-bottom-style: solid;
-  margin-top: 0px;
-  margin-right: 0px;
-  text-shadow: 1px 1px;
-  color: slateblue;
-  box-shadow: antiquewhite;
-  margin-left: 0px;
-  margin-right: 0px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow:
+    var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000),
+    var(--tw-shadow);
 
-  background-color: antiquewhite;
+    position: sticky;
+    top: 0px;
+    z-index: 50;
 
-  .allhead{
-    display: flex;
-  margin-left: 792px;
-  margin-top: 16px;
-  gap: 33px;
-  font-size: 19px;
-}
+    .contents{
+      max-width: 1280px;
+      margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+    }
+
+    .head-pages{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+
+      .main-head{
+        font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  background-clip: text;
+  color: transparent;
+  cursor: pointer;
+  border: none;
+  --tw-gradient-from-position: 0%;
+  --tw-gradient-to-position: 100%;
+
+  --tw-gradient-from: #9333ea var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(147, 51, 234, 0) var(--tw-gradient-to-position);
+
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+      }
+
+      .nav-bar{
+        display: flex;
+        gap: 34px;
+        justify-content: space-around;
+        button{
+          --tw-text-opacity: 1;
+  color: rgb(147 51 234 / var(--tw-text-opacity, 1));
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+  font-size: 100%;
+  line-height: 24px;
+ 
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+      }
+    }
+
+
 }
 
 

@@ -5,27 +5,20 @@ import { Router } from '@angular/router';
   selector: 'app-header',
   imports: [],
   templateUrl: './header.html',
-  styleUrl: './header.scss'
+  styleUrl: './header.scss',
 })
 export class Header {
+  constructor(private router: Router) {}
 
-  constructor(private router:Router){
-    console.log("Page Loaded");
-    
-  }
-
-  GoToAboutPage(){
+  GoToAboutPage() {
     this.router.navigate(['/about-me']);
-    
-    
   }
 
-  GoToHomePage(){
+  GoToHomePage() {
     this.router.navigate(['home']);
   }
 
-  GoToContactPage(){
+  GoToContactPage() {
     this.router.navigate(['contact']);
   }
-
 }
