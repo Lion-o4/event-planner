@@ -39,6 +39,7 @@
     </div>
   </div>
 </div>
+@if(layoutSelected==='Grid'){
 <h2 class="events">Featured Events</h2>
 
 <div class="forloop">
@@ -47,11 +48,12 @@
 
   }
 </div>
-
-@if(layoutSelected==='Grid'){
+} @if(layoutSelected==='Grid'){
 <div class="forloop2">
   @for(item of newEventArr;track item.id){
   <app-newevent [newdetails]="item"></app-newevent>
   }
 </div>
+}@else{
+<app-list-view></app-list-view>
 }

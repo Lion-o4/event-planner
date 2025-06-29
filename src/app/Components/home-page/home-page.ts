@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { EventCard } from '../../reusable components/event-card/event-card';
 import { Newevent } from '../../reusable components/newevent/newevent';
 import { TitleCasePipe } from '@angular/common';
+import { ListView } from '../../reusable components/list-view/list-view';
 @Component({
   selector: 'app-home-page',
-  imports: [EventCard, Newevent, TitleCasePipe],
+  imports: [EventCard, Newevent, TitleCasePipe, ListView],
   templateUrl: './home-page.html',
   styleUrl: './home-page.scss',
 })
