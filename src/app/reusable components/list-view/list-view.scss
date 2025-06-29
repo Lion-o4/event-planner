@@ -1,0 +1,133 @@
+// Fire–Ice gradient
+$colors: (
+  fireice: linear-gradient(to right, #ff6a00, #1e90ff),
+  aurora: linear-gradient(to right, #00c6ff, #0072ff),
+  sunrise: linear-gradient(to right, #ff512f, #dd2476),
+  mint: linear-gradient(to right, #00f2fe, #4facfe),
+  dusk: linear-gradient(to right, #614385, #516395),
+  sunset: linear-gradient(to right, #f83600, #f9d423),
+  royal: linear-gradient(to right, #141e30, #243b55),
+  ocean: linear-gradient(to right, #2193b0, #6dd5ed),
+  peach: linear-gradient(to right, #ed4264, #ffedbc),
+  frost: linear-gradient(to right, #c9d6ff, #e2e2e2),
+  neon: linear-gradient(to right, #fc466b, #3f5efb),
+  jungle: linear-gradient(to right, #11998e, #38ef7d),
+  sunsetBlush: linear-gradient(to right, #ff9a9e, #fad0c4),
+  grape: linear-gradient(to right, #667eea, #764ba2),
+  lava: linear-gradient(to right, #ff416c, #ff4b2b),
+);
+
+.list-container::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.list-container {
+  max-width: 900px;
+  background-image: url("https://www.heropatterns.com/static/media/pattern-path.a9c4505e.svg");
+  background-size: 300px;
+  //   background-color: #0f172a;
+  margin: 0px auto;
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+
+  h1 {
+    text-align: center;
+    font-family: "Orbitron", sans-serif;
+    font-size: 36px;
+    color: #e2e8f0;
+    margin-bottom: 25px;
+    margin-top: 0px;
+  }
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .event-row {
+    display: flex;
+    align-items: flex-start;
+    border-radius: 14px;
+    margin-bottom: 24px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    background: linear-gradient(270deg, #ff6a00, #1e90ff, #38ef7d);
+    background-size: 600% 600%;
+    animation: gradientShift 10s ease infinite;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+    .emoji {
+      font-size: 40px;
+      width: 60px;
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    .info {
+      flex: 1;
+      color: #f8fafc;
+
+      h3 {
+        margin: 0 0 10px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 14px;
+        margin: 4px 0;
+
+        span {
+          font-weight: 600;
+          color: #f1f5f9;
+        }
+      }
+    }
+
+    .type {
+      display: flex;
+      align-items: center;
+
+      .type-btn {
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        padding: 6px 16px;
+        border-radius: 20px;
+        color: #fff;
+        font-weight: 500;
+        font-family: "Orbitron", sans-serif;
+        text-transform: uppercase;
+        font-size: 12px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background: #fff;
+          color: #000;
+        }
+      }
+    }
+  }
+}
