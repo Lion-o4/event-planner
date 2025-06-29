@@ -28,4 +28,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages # Deployment branch
+          token: ${{ secrets.GITHUB_TOKEN }}
           folder: dist/event-planner # Replace with your actual output folder
