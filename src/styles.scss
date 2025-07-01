@@ -1,9 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-$primary: #ff4e50; // strong red-pink
-$secondary: #f9d423; // yellow-orange
-$accent: #1bffff; // cyan
-$bg: #fefefe;
-$gradient: linear-gradient(to right, #ff4e50, #f9d423);
 
 /* app.component.css or your layout CSS */
 body {
@@ -11,5 +6,6 @@ body {
   margin: 0;
   flex-direction: column;
   min-height: 100vh;
+  // background-color: aliceblue;
 }
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap");

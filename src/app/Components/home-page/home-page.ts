@@ -15,7 +15,7 @@ export class HomePage {
   eventFilterSelected: string = 'All';
   layoutSelected: string = 'Grid';
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.allEventArr.forEach((item) => {
       this.labelArr.push(item.label);
     });
@@ -49,6 +49,9 @@ export class HomePage {
       imageLink: 'pands.jpeg',
       label: 'Workshop',
       dateTime: '28 July 2025 at 10:00 AM',
+      date: 'addfgghj',
+      place: 'shjsb',
+      time: '3456789',
       eventName: 'Dance Morning',
     },
     {
@@ -138,7 +141,7 @@ export class HomePage {
     },
   ];
 
-  eventTypeArr(eventType: string) {
+  eventTypeArr(eventType: string): void {
     this.eventFilterSelected = eventType;
 
     this.newEventArr = [];

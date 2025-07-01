@@ -4,8 +4,23 @@ import { Component } from '@angular/core';
   selector: 'app-about',
   imports: [],
   templateUrl: './about.html',
-  styleUrl: './about.scss'
+  styleUrl: './about.scss',
 })
 export class About {
+  fullText: string = `Hi! I'm [Your Name], a second-year student passionate about helping first-years thrive. Welcome to my journey!`;
+  typedText: string = '';
+  index: number = 0;
 
+  ngOnInit() {
+    this.typeWriter();
+  }
+
+  typeWriter() {
+    if (this.index < this.fullText.length) {
+      this.typedText += this.fullText.charAt(this.index);
+
+      this.index++;
+      setTimeout(() => this.typeWriter(), 40);
+    }
+  }
 }

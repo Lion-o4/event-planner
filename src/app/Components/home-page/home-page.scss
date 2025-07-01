@@ -52,18 +52,18 @@ $gradient: linear-gradient(to right, #ff4e50, #f9d423);
 
     text-align: center;
     background-clip: text;
-    --tw-gradient-to: #3b82f6 var(--tw-gradient-to-position);
-    --tw-gradient-from: #9333ea var(--tw-gradient-from-position);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    // --tw-gradient-to: #3b82f6 var(--tw-gradient-to-position);
+    // --tw-gradient-from: #9333ea var(--tw-gradient-from-position);
+    // --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
     background-image: $gradient;
     margin-bottom: 2rem;
     margin: 0;
     box-sizing: border-box;
     border-width: 0;
 
-    --tw-gradient-from-position: ;
+    // --tw-gradient-from-position: ;
 
-    --tw-gradient-to-position: ;
+    // --tw-gradient-to-position: ;
   }
   .button {
     gap: 0.5rem;
@@ -72,6 +72,12 @@ $gradient: linear-gradient(to right, #ff4e50, #f9d423);
 
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    button {
+      &:hover {
+        background: linear-gradient(to right, #f8605c, #fbe051);
+        box-shadow: 0 4px 12px rgba(255, 78, 80, 0.4);
+      }
+    }
   }
   .btn-sel {
     color: rgb(255 255 255 / var(--tw-text-opacity, 1));
@@ -82,7 +88,7 @@ $gradient: linear-gradient(to right, #ff4e50, #f9d423);
     padding-left: 1rem;
     padding-right: 1rem;
 
-    background-color: rgb(147 51 234 / var(--tw-bg-opacity, 1));
+    background-image: linear-gradient(to right, #ff4e50, #f9d423);
     border-radius: 9999px;
     cursor: pointer;
 
@@ -111,6 +117,13 @@ $gradient: linear-gradient(to right, #ff4e50, #f9d423);
 
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+    button {
+      &:hover {
+        background: linear-gradient(to right, #f8605c, #fbe051);
+        box-shadow: 0 4px 12px rgba(255, 78, 80, 0.4);
+      }
+    }
   }
   .layout-selected {
     color: rgb(255 255 255 / var(--tw-text-opacity, 1));
@@ -130,6 +143,7 @@ $gradient: linear-gradient(to right, #ff4e50, #f9d423);
     cursor: pointer;
 
     border-width: 0;
+    background-image: linear-gradient(to right, #ff4e50, #f9d423);
   }
   .layout-unselected {
     color: rgb(55 65 81 / var(--tw-text-opacity, 1));
@@ -156,7 +170,9 @@ $gradient: linear-gradient(to right, #ff4e50, #f9d423);
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 2rem;
-
+  background-clip: text;
+  color: transparent;
+  background-image: $gradient;
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }

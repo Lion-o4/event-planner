@@ -55,7 +55,15 @@
     <app-newevent [newdetails]="item"></app-newevent>
     }
   </div>
-  }@else{
-  <app-list-view></app-list-view>
+  }
+</div>
+
+<div>
+  @if(layoutSelected==='List'){
+  <div class="info">
+    @for(item of newEventArr;track item.id){
+    <app-list-view [newDetails]="item"></app-list-view>
+    }
+  </div>
   }
 </div>

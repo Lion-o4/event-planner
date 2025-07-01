@@ -35,10 +35,11 @@ ul {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  padding-left: 0px;
 }
 
 li {
-  background: linear-gradient(145deg, #ffe2f1, #e2f0ff);
+  background: linear-gradient(145deg, #ffe6e3, #fff6d2);
   border-radius: 20px;
   padding: 20px;
   width: 260px;
@@ -61,7 +62,7 @@ li:nth-child(even) {
 li:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 25px rgba(255, 72, 120, 0.2);
-  background: linear-gradient(145deg, #ffecf6, #def2ff);
+  background: linear-gradient(145deg, #ffeae5, #fff4cc);
 }
 
 li::before {
