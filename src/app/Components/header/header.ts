@@ -10,15 +10,15 @@ import { Router } from '@angular/router';
 export class Header {
   constructor(private router: Router) {}
 
-  GoToAboutPage() {
+  GoToAboutPage(): void {
     this.router.navigate(['/about-me']);
   }
 
-  GoToHomePage() {
+  GoToHomePage(): void {
     this.router.navigate(['home']);
   }
 
-  GoToContactPage() {
+  GoToContactPage(): void {
     this.router.navigate(['Bucket-List']);
   }
 }

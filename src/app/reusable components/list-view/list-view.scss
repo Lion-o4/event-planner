@@ -70,9 +70,10 @@ $colors: (
     backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    background: linear-gradient(270deg, #ff6a00, #1e90ff, #38ef7d);
+    background: linear-gradient(270deg, #ff4e50, #ff715b, #ffb07c);
     background-size: 600% 600%;
     animation: gradientShift 10s ease infinite;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 
     &:hover {
       transform: translateY(-3px);
