@@ -2,7 +2,17 @@
   <div class="contents">
     <div class="head-pages">
       <button class="main-head">IITD EVENTS</button>
-      <nav class="nav-bar">
+
+      <!-- ✅ Hamburger -->
+      <button class="hamburger" (click)="toggleMenu()">
+        <span *ngIf="!isMenuOpen">&#9776;</span>
+        <!-- ☰ -->
+        <span *ngIf="isMenuOpen">&#10005;</span>
+        <!-- ✕ -->
+      </button>
+
+      <!-- ✅ Nav Menu -->
+      <nav class="nav-bar" [class.open]="isMenuOpen">
         <button (click)="GoToHomePage()">Events</button>
         <button (click)="GoToContactPage()">Bucket List</button>
         <button (click)="GoToAboutPage()">About</button>

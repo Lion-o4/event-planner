@@ -42,6 +42,19 @@ export class HomePage {
       dateTime: '03 August 2025 at 11:00 AM',
       eventName: 'Music Mahol',
     },
+
+    {
+      id: 2,
+      imageLink: 'pandsDance.jpeg',
+      dateTime: '1 August 2025 at 11:00 PM',
+      eventName: 'Drams Natak',
+    },
+    {
+      id: 3,
+      imageLink: 'pandsYoga.jpeg',
+      dateTime: '03 August 2025 at 11:00 AM',
+      eventName: 'Music Mahol',
+    },
   ];
   allEventArr = [
     {
@@ -53,6 +66,7 @@ export class HomePage {
       place: 'shjsb',
       time: '3456789',
       eventName: 'Dance Morning',
+      emoji: '🥰',
     },
     {
       id: 2,
@@ -60,6 +74,10 @@ export class HomePage {
       label: 'Standup',
       dateTime: '1 August 2025 at 11:00 PM',
       eventName: 'Drams Natak',
+      date: 'addfgghj',
+      place: 'hello',
+      time: '3456789',
+      emoji: '😆',
     },
     {
       id: 3,
@@ -67,6 +85,10 @@ export class HomePage {
       label: 'Poetry',
       dateTime: '03 August 2025 at 11:00 AM',
       eventName: 'Music Mahol',
+      date: 'addfgghj',
+      place: 'shjsb',
+      time: '3456789',
+      emoji: '❤️',
     },
     {
       id: 1,
@@ -74,6 +96,9 @@ export class HomePage {
       label: 'Workshop',
       dateTime: '28 July 2025 at 10:00 AM',
       eventName: 'Dance Morning',
+      date: 'addfgghj',
+      place: 'shjsb',
+      time: '3456789',
     },
     {
       id: 2,
@@ -81,6 +106,9 @@ export class HomePage {
       label: 'Standup',
       dateTime: '1 August 2025 at 11:00 PM',
       eventName: 'Drams Natak',
+      date: 'addfgghj',
+      place: 'shjsb',
+      time: '3456789',
     },
     {
       id: 3,
@@ -88,6 +116,9 @@ export class HomePage {
       label: 'Poetry',
       dateTime: '03 August 2025 at 11:00 AM',
       eventName: 'Music Mahol',
+      date: 'addfgghj',
+      place: 'shjsb',
+      time: '3456789',
     },
     {
       id: 3,
@@ -95,6 +126,9 @@ export class HomePage {
       label: 'Garba Night',
       dateTime: '03 August 2025 at 11:00 AM',
       eventName: 'Music Mahol',
+      date: 'addfgghj',
+      place: 'shjsb',
+      time: '3456789',
     },
     {
       id: 3,
@@ -102,6 +136,9 @@ export class HomePage {
       label: 'Exhibition',
       dateTime: '03 August 2025 at 11:00 AM',
       eventName: 'Music Mahol',
+      date: 'addfgghj',
+      place: 'shjsb',
+      time: '3456789',
     },
     {
       id: 3,
@@ -109,6 +146,9 @@ export class HomePage {
       label: 'Race',
       dateTime: '03 August 2025 at 11:00 AM',
       eventName: 'Music Mahol',
+      date: 'addfgghj',
+      place: 'shjsb',
+      time: '3456789',
     },
     {
       id: 3,
@@ -116,6 +156,9 @@ export class HomePage {
       label: 'a1',
       dateTime: '03 August 2025 at 11:00 AM',
       eventName: 'Music Mahol',
+      date: 'addfgghj',
+      place: 'shjsb',
+      time: '3456789',
     },
     {
       id: 3,
@@ -123,6 +166,9 @@ export class HomePage {
       label: 'Ra',
       dateTime: '03 August 2025 at 11:00 AM',
       eventName: 'Music Mahol',
+      date: 'addfgghj',
+      place: 'shjsb',
+      time: '3456789',
     },
 
     {
@@ -131,6 +177,9 @@ export class HomePage {
       label: 'Rampyaaari',
       dateTime: '03 August 2025 at 11:00 AM',
       eventName: 'Music Mahol',
+      date: 'addfgghj',
+      place: 'shjsb',
+      time: '3456789',
     },
     {
       id: 3,
@@ -138,6 +187,9 @@ export class HomePage {
       label: 'Racesdgfhfdghd',
       dateTime: '03 August 2025 at 11:00 AM',
       eventName: 'Music Mahol',
+      date: 'addfgghj',
+      place: 'shjsb',
+      time: '3456789',
     },
   ];
 

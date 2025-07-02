@@ -1,22 +1,44 @@
 $gradient: linear-gradient(to right, #ff4e50, #f9d423);
+
 .event-card {
   background: white;
   border-radius: 16px;
   overflow: hidden;
   width: 400px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   height: 296px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .card-image {
   position: relative;
-}
 
-.card-image img {
-  width: 400px;
-  height: 192px;
-  display: block;
-  object-fit: cover;
+  img {
+    width: 400px;
+    height: 192px;
+    display: block;
+    object-fit: cover;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 180px;
+    }
+
+    @media (max-width: 480px) {
+      width: 100%;
+      height: 160px;
+    }
+  }
 }
 
 .label {
@@ -31,23 +53,45 @@ $gradient: linear-gradient(to right, #ff4e50, #f9d423);
   font-weight: bold;
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
 }
 
 .card-content {
   padding: 16px;
   width: 400px;
   height: 176px;
-}
+  font-family: "Poppins", sans-serif;
 
-.card-content h2 {
-  font-size: 20px;
-  margin: 0 0 8px;
-  color: #1f1f1f;
-}
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
 
-.card-content .time,
-.card-content .location {
-  font-size: 14px;
-  color: #555;
-  margin: 2px 0;
+  h2 {
+    font-size: 20px;
+    margin: 0 0 8px;
+    color: #1f1f1f;
+
+    @media (max-width: 480px) {
+      font-size: 18px;
+    }
+  }
+
+  .time,
+  .location {
+    font-size: 14px;
+    color: #555;
+    margin: 2px 0;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin-top: 8px;
+
+    @media (max-width: 480px) {
+      font-size: 16px;
+    }
+  }
 }
