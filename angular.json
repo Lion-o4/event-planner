@@ -32,6 +32,7 @@
           "configurations": {
             "production": {
               "baseHref": "/event-planner/",
+              "outputPath": "dist/event-planner",
               "budgets": [
                 {
                   "type": "initial",
