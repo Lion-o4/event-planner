@@ -60,7 +60,7 @@
 
 <div>
   @if(layoutSelected==='List'){
-  <div class="info">
+  <div>
     @for(item of newEventArr;track item.id){
     <app-list-view [newDetails]="item"></app-list-view>
     }

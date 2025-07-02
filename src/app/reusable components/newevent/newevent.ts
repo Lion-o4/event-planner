@@ -14,5 +14,6 @@ export class Newevent {
     eventName: 'hi',
     dateTime: 'djdndj',
     imageLink: 'pands.jpeg',
+    place: 'dogra hall',
   };
 }

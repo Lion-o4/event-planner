@@ -15,5 +15,6 @@ export class ListView {
     time: '0:00 AM - 2:00 PM',
     place: 'Dogra',
     imageLink: 'pands.jpeg',
+    emoji: '🤓',
   };
 }
