@@ -16,13 +16,13 @@ export class Event {
 
   getEvents(): Observable<any[]> {
     if (this.eventCache) {
-      return of(this.eventCache);
+      // Return a deep copy to avoid mutation issues
+      return of(structuredClone(this.eventCache));
     }
     return this.http.get<any>(this.apiURL).pipe(
       tap((response) => {
         this.eventCache = response;
-      }),
-      tap((response) => response)
+      })
     );
   }
 }

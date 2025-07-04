@@ -25,7 +25,6 @@ export class HomePage {
   ngOnInit(): void {
     this.fetchEventsData();
   }
-
   constructor(private eventService: Event) {}
 
   fetchEventsData() {
@@ -36,10 +35,15 @@ export class HomePage {
       .pipe(finalize(() => (this.loader = false)))
       .subscribe((data: any) => {
         this.allEventArr = data.sheet1;
+
         this.allEventArr.forEach((item: { label: string; dateTime: any }) => {
           this.labelArr.push(item.label);
-          const [day, month, year] = item.dateTime.split('/').map(Number);
-          item.dateTime = new Date(year, month - 1, day);
+
+          // ✅ Only parse date if it's a string
+          if (typeof item.dateTime === 'string') {
+            const [day, month, year] = item.dateTime.split('/').map(Number);
+            item.dateTime = new Date(year, month - 1, day);
+          }
         });
 
         this.allEventArr.sort(
