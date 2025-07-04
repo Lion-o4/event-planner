@@ -13,7 +13,9 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "G-E5614SX30R");
+      gtag("config", "G-E5614SX30R", {
+        page_path: event.urlAfterRedirects,
+      });
     </script>
     <meta charset="utf-8" />
     <title>EventPlanner</title>
