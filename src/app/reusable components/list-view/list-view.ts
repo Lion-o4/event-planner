@@ -1,8 +1,9 @@
+import { DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { Input } from '@angular/core';
 @Component({
   selector: 'app-list-view',
-  imports: [],
+  imports: [DatePipe],
   templateUrl: './list-view.html',
   styleUrl: './list-view.scss',
 })
@@ -11,8 +12,8 @@ export class ListView {
     id: 1,
     label: 'workshop',
     eventName: 'hi',
-    date: 'djdndj',
-    time: '0:00 AM - 2:00 PM',
+    dateTime: '24/05/2025',
+    time: '12 pm-3 pm',
     place: 'Dogra',
     imageLink: 'pands.jpeg',
     emoji: '🤓',

@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './about.scss',
 })
 export class About {
-  fullText: string = `Hi! I'm [Your Name], a second-year student passionate about helping first-years thrive. Welcome to my journey!`;
+  fullText: string = `Hi! I'm Gauri Dhakad, a second-year student passionate about helping first-years thrive. Welcome to my journey!`;
   typedText: string = '';
   index: number = 0;
 

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FeaturedEvents } from './featured-events';
+import { Loader } from './loader';
 
-describe('FeaturedEvents', () => {
-  let component: FeaturedEvents;
-  let fixture: ComponentFixture<FeaturedEvents>;
+describe('Loader', () => {
+  let component: Loader;
+  let fixture: ComponentFixture<Loader>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FeaturedEvents]
+      imports: [Loader]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FeaturedEvents);
+    fixture = TestBed.createComponent(Loader);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
