@@ -1,4 +1,8 @@
-<div class="final-event">
+<div *ngIf="loader">
+  <app-loader></app-loader>
+</div>
+
+<div *ngIf="!loader" class="final-event">
   <div class="home-container">
     <h1 class="head">EVENTS AND WORKSHOPS</h1>
     <div class="btn1">

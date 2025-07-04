@@ -53,6 +53,7 @@ $gradient: linear-gradient(to right, #ff4e50, #f9d423);
       gap: 34px;
       justify-content: space-around;
       cursor: pointer;
+      z-index: 1;
 
       button {
         color: transparent;

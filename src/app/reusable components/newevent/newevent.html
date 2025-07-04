@@ -4,8 +4,11 @@
     <span class="label">{{newdetails.label|uppercase}}</span>
   </div>
   <div class="card-content">
-    <h2>{{newdetails.eventName}}</h2>
-    <p class="time">{{newdetails.dateTime}}</p>
-    <p class="location">{{newdetails.place}}</p>
+    <h2>{{newdetails.eventName|titlecase}}</h2>
+    <p class="time">
+      {{newdetails.dateTime| date:'EEE MMM dd yyyy' }} <span>👉</span>
+      <span> {{newdetails.time}}</span>
+    </p>
+    <p class="location">{{newdetails.place|titlecase}}</p>
   </div>
 </div>
