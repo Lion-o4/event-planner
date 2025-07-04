@@ -46,7 +46,6 @@ $gradient: linear-gradient(to right, #ff4e50, #f9d423);
 }
 
 .para {
-  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
   margin: 0;
   font-size: 0.95rem;
 
@@ -71,7 +70,7 @@ $gradient: linear-gradient(to right, #ff4e50, #f9d423);
     text-align: center;
   }
 
-  > div {
+  div {
     margin-bottom: 2rem;
 
     @media (min-width: 768px) {
