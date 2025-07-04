@@ -49,7 +49,6 @@ $gradient-light: linear-gradient(to right, #ffc1c1, #fff0b3);
   .animated-intro {
     font-size: 3rem;
     text-align: center;
-    font-family: "Poppins", sans-serif;
     font-weight: 700;
     background: linear-gradient(90deg, #ffc56e, hsl(17, 93%, 49%));
     -webkit-background-clip: text;
@@ -94,10 +93,11 @@ $gradient-light: linear-gradient(to right, #ffc1c1, #fff0b3);
     max-width: 800px;
     animation: blinkCursor 0.8s steps(1) infinite;
     min-height: 70px;
+    font-family: "Poppins", sans-serif;
 
     background-clip: border-box;
 
-    padding-top: 9px;
+    padding: 9px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     background: linear-gradient(to right, #ffc1c1, #fff0b3);
@@ -175,11 +175,73 @@ section {
   }
 }
 
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.fancy-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #ffb6c1, #ffe6a7);
+  color: #333;
+  text-decoration: none;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fancy-button.large {
+  font-size: 1.3rem;
+  padding: 20px 36px;
+}
+
+.fancy-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo image style */
+.logo-img {
+  height: 24px;
+  width: 24px;
+  object-fit: contain;
+}
+
+.fancy-button.large .logo-img {
+  height: 36px;
+  width: 36px;
+}
+
+@media (max-width: 500px) {
+  .fancy-button {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  .logo-img {
+    height: 20px;
+    width: 20px;
+  }
+
+  .fancy-button.large .logo-img {
+    height: 28px;
+    width: 28px;
+  }
+}
+
 .contact-button {
   display: inline-block;
   background: linear-gradient(90deg, #ffc1cc, #ffe6b3);
   color: #333;
-  font-family: "Poppins", sans-serif;
   font-weight: 600;
   padding: 12px 24px;
   border-radius: 40px;

@@ -11,9 +11,9 @@ import { Input } from '@angular/core';
 export class EventCard {
   @Input() eventDetail = {
     id: 1,
-    eventName: 'hi',
-    dateTime: 'djdndj',
-    imageLink: 'public/pands.jpeg',
+    eventname: 'hi',
+    datetime: 'djdndj',
+    imagelink: 'public/pands.jpeg',
     time: '12pm-3pm',
   };
 }

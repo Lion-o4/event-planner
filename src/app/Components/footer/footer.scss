@@ -32,6 +32,18 @@ $gradient: linear-gradient(to right, #ff4e50, #f9d423);
   width: 100%;
 }
 
+.footer-quote {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #888; /* soft, water-like */
+  margin-top: 10px;
+  // padding-bottom: 20px;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+}
+
 .foot-head {
   color: transparent;
   background-image: $gradient;
