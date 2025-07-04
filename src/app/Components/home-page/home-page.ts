@@ -34,8 +34,6 @@ export class HomePage {
       .getEvents()
       .pipe(finalize(() => (this.loader = false)))
       .subscribe((data: any) => {
-        console.log(data);
-
         this.allEventArr = data;
 
         this.allEventArr.forEach((item: { label: string; datetime: any }) => {
