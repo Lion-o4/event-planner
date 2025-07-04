@@ -7,10 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './about.scss',
 })
 export class About {
-  fullText: string = `Hi! I'm Gauri Dhakad, Hope so this website help you'.
-
-  
-  Welcome to my journey!`;
+  fullText: string = `Hi, I’m from Mandsaur (M.P.). I created this website as part of my summer learning to help students easily stay updated on campus events.
+Instead of relying on scattered sources and missed emails, this platform offers a clean, organized view of everything you need to know.`;
   typedText: string = '';
   index: number = 0;
 

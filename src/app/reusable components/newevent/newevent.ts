@@ -11,9 +11,9 @@ export class Newevent {
   @Input() newdetails = {
     id: 1,
     label: 'workshop',
-    eventName: 'hi',
-    dateTime: 'djdndj',
-    imageLink: 'pands.jpeg',
+    eventname: 'hi',
+    datetime: 'djdndj',
+    imagelink: 'pands.jpeg',
     place: 'dogra hall',
     time: '12pm-3pm',
   };

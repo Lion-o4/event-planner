@@ -3,10 +3,10 @@ $gradient: linear-gradient(to right, #ff4e50, #f9d423);
 .event-card {
   background: white;
   border-radius: 16px;
-  overflow: hidden;
+  // overflow: hidden;
   width: 400px;
-  height: 296px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 330px;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 
   @media (max-width: 768px) {
@@ -28,6 +28,7 @@ $gradient: linear-gradient(to right, #ff4e50, #f9d423);
     height: 192px;
     display: block;
     object-fit: cover;
+    border-radius: 16px;
 
     @media (max-width: 768px) {
       width: 100%;
@@ -36,7 +37,7 @@ $gradient: linear-gradient(to right, #ff4e50, #f9d423);
 
     @media (max-width: 480px) {
       width: 100%;
-      height: 160px;
+      height: 196px;
     }
   }
 }
@@ -66,6 +67,13 @@ $gradient: linear-gradient(to right, #ff4e50, #f9d423);
   height: 176px;
   font-family: "Poppins", sans-serif;
 
+  .register {
+    display: flex;
+    justify-content: start;
+    align-items: first baseline;
+    gap: 8px;
+  }
+
   @media (max-width: 768px) {
     width: 100%;
     height: auto;
@@ -85,10 +93,10 @@ $gradient: linear-gradient(to right, #ff4e50, #f9d423);
   .location {
     font-size: 14px;
     color: #555;
-    margin: 2px 0;
+    margin-bottom: 0%;
+
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    margin-top: 8px;
 
     @media (max-width: 480px) {
       font-size: 16px;

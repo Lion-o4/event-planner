@@ -11,8 +11,8 @@ export class ListView {
   @Input() newDetails = {
     id: 1,
     label: 'workshop',
-    eventName: 'hi',
-    dateTime: '24/05/2025',
+    eventname: 'hi',
+    datetime: '24/05/2025',
     time: '12 pm-3 pm',
     place: 'Dogra',
     imageLink: 'pands.jpeg',

@@ -34,25 +34,41 @@ export class HomePage {
       .getEvents()
       .pipe(finalize(() => (this.loader = false)))
       .subscribe((data: any) => {
-        this.allEventArr = data.sheet1;
+        console.log(data);
 
-        this.allEventArr.forEach((item: { label: string; dateTime: any }) => {
+        this.allEventArr = data;
+
+        this.allEventArr.forEach((item: { label: string; datetime: any }) => {
           this.labelArr.push(item.label);
 
           // ✅ Only parse date if it's a string
-          if (typeof item.dateTime === 'string') {
-            const [day, month, year] = item.dateTime.split('/').map(Number);
-            item.dateTime = new Date(year, month - 1, day);
+          const rawDate = item.datetime;
+
+          if (typeof rawDate === 'string' && rawDate.startsWith('Date(')) {
+            // ✅ Handles "Date(2025,6,24)" from Google Sheet
+            const match = rawDate.match(/Date\((\d+),(\d+),(\d+)\)/);
+            if (match) {
+              const [_, year, month, day] = match.map(Number);
+              item.datetime = new Date(year, month, day);
+            } else {
+              item.datetime = new Date('2100-01-01'); // fallback
+            }
+          } else if (typeof rawDate === 'string' && rawDate.includes('/')) {
+            // ✅ Fallback if manually entered as "24/07/2025"
+            const [day, month, year] = rawDate.split('/').map(Number);
+            item.datetime = new Date(year, month - 1, day);
+          } else {
+            item.datetime = new Date('2100-01-01'); // fallback if invalid or missing
           }
         });
 
         this.allEventArr.sort(
-          (a: { dateTime: Date }, b: { dateTime: Date }) =>
-            (a.dateTime as Date).getTime() - (b.dateTime as Date).getTime()
+          (a: { datetime: Date }, b: { datetime: Date }) =>
+            (a.datetime as Date).getTime() - (b.datetime as Date).getTime()
         );
 
         this.featuredEventsArr = this.allEventArr.filter(
-          (item: { isFeatured: string }) => item.isFeatured === 'yes'
+          (item: { isfeatured: string }) => item.isfeatured === 'yes'
         );
 
         this.labelArr = [...new Set(this.labelArr)];
