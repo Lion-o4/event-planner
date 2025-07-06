@@ -13,6 +13,7 @@ Instead of relying on scattered sources and missed emails, this platform offers 
   index: number = 0;
 
   ngOnInit() {
+    window.scroll(0, 0);
     this.typeWriter();
   }
 

@@ -23,6 +23,7 @@ export class HomePage {
   loader: boolean = false;
 
   ngOnInit(): void {
+    window.scroll(0, 0);
     this.fetchEventsData();
   }
   constructor(private eventService: Event) {}
