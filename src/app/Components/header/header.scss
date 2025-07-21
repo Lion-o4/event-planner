@@ -1,12 +1,12 @@
 $gradient: linear-gradient(to right, #ff4e50, #f9d423);
 
-.header-container {
+.header-container1 {
   --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -2px rgba(0, 0, 0, 0.1);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 
-  .contents {
+  .contents1 {
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
@@ -16,13 +16,13 @@ $gradient: linear-gradient(to right, #ff4e50, #f9d423);
     padding-bottom: 1rem;
   }
 
-  .head-pages {
+  .head-pages1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
 
-    .main-head {
+    .main-head1 {
       font-size: 1.5rem;
       line-height: 2rem;
       font-weight: 700;
@@ -34,7 +34,7 @@ $gradient: linear-gradient(to right, #ff4e50, #f9d423);
       background-image: $gradient;
     }
 
-    .hamburger {
+    .hamburger1 {
       display: none;
       background: none;
       border: none;
@@ -48,7 +48,7 @@ $gradient: linear-gradient(to right, #ff4e50, #f9d423);
       }
     }
 
-    .nav-bar {
+    .nav-bar1 {
       display: flex;
       gap: 34px;
       justify-content: space-around;

@@ -5,6 +5,60 @@
 <div *ngIf="!loader" class="final-event">
   <div class="home-container">
     <h1 class="head">EVENTS AND WORKSHOPS</h1>
+    <!-- Search and Filter Section with Angular two-way data binding -->
+    <div class="sticky top-0 z-10 backdrop-blur-sm bg-white/70">
+      <div class="max-w-2xl mx-auto">
+        <label for="search-box" class="sr-only">Search by Branch Code</label>
+        <div class="relative">
+          <div
+            class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none"
+          >
+            <svg
+              class="h-5 w-5 text-gray-400"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <input
+            type="text"
+            id="search-box"
+            class="block w-full bg-white border-2 border-blue-500 rounded-full py-3 pl-12 pr-16 text-gray-900 placeholder-gray-400 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600 text-lg transition-all"
+            placeholder="Enter your branch code (e.g., CS1, ME2)..."
+            [(ngModel)]="searchTerm"
+            (input)="filterEvents()"
+          />
+          <button
+            (click)="clearSearch()"
+            class="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 hover:text-blue-600 transition-colors"
+            type="button"
+            aria-label="Clear search"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
     <div class="btn1">
       <div class="button">
         <button
@@ -55,7 +109,7 @@
   </div>
   } @if(layoutSelected==='Grid'){
   <div class="forloop2">
-    @for(item of newEventArr;track item.id){
+    @for(item of paginatedEvents;track item.id){
     <app-newevent [newdetails]="item"></app-newevent>
     }
   </div>
@@ -65,9 +119,62 @@
 <div>
   @if(layoutSelected==='List'){
   <div>
-    @for(item of newEventArr;track item.id){
+    @for(item of paginatedEvents;track item.id){
     <app-list-view [newDetails]="item"></app-list-view>
     }
   </div>
   }
+</div>
+
+<!-- Pagination Controls -->
+<div
+  *ngIf="canBeLoaded && paginatedEvents.length!==0"
+  class="flex justify-center items-center space-x-2 navi-btns"
+>
+  <button
+    (click)="goToPage(currentPage - 1)"
+    [disabled]="currentPage === 1"
+    class="pagination-btn px-5 py-2 rounded-full text-white font-bold shadow-md"
+  >
+    &laquo; Prev
+  </button>
+  <ng-container *ngFor="let pageNum of getPageNumbers()">
+    <button
+      (click)="goToPage(pageNum)"
+      [class.active-page]="pageNum === currentPage"
+      class="pagination-btn"
+    >
+      {{ pageNum }}
+    </button>
+  </ng-container>
+  <button
+    (click)="goToPage(currentPage + 1)"
+    [disabled]="currentPage === totalPages"
+    class="pagination-btn"
+  >
+    Next &raquo;
+  </button>
+</div>
+
+<!-- No Results Message -->
+<div *ngIf="false">
+  <div class="text-center py-16">
+    <svg
+      class="mx-auto h-12 w-12 text-gray-500"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+      />
+    </svg>
+    <h3 class="mt-2 text-xl font-medium text-gray-300">No Events Found</h3>
+    <p class="mt-1 text-gray-400">
+      Please check your branch code or clear the search.
+    </p>
+  </div>
 </div>
