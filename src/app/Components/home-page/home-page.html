@@ -30,10 +30,11 @@
           <input
             type="text"
             id="search-box"
-            class="block w-full bg-white border-2 border-blue-500 rounded-full py-3 pl-12 pr-16 text-gray-900 placeholder-gray-400 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600 text-lg transition-all"
+            class="block w-full bg-white border-2 rounded-full py-3 pl-12 pr-16 text-gray-900 placeholder-gray-400 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600 text-lg transition-all"
             placeholder="Enter your branch code (e.g., CS1, ME2)..."
             [(ngModel)]="searchTerm"
             (input)="filterEvents()"
+            style="border: 2px solid #ff4e50"
           />
           <button
             (click)="clearSearch()"
