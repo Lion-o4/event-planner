@@ -67,6 +67,25 @@ $gradient: linear-gradient(to right, #ff4e50, #f9d423);
       font-size: 1.5rem; // responsive
     }
   }
+  .branch-helper-text {
+    text-align: center;
+    margin-top: 12px; /* Adjust spacing as needed */
+    font-family: "Poppins", sans-serif; /* Example font */
+    font-size: 14px; /* Smaller than input text */
+    color: #6c757d; /* Soft gray color */
+  }
+
+  .branch-helper-text a {
+    color: #ff7f50; /* Use your brand's orange color */
+    font-weight: 600; /* Makes "Click here" stand out */
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+
+  .branch-helper-text a:hover {
+    color: #ff6347; /* A slightly darker/brighter orange on hover */
+    text-decoration: underline;
+  }
 
   .button {
     display: flex;
