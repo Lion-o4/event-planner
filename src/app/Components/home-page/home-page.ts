@@ -7,6 +7,8 @@ import { Event } from '../../../Services/event';
 import { finalize } from 'rxjs/operators';
 import { Loader } from '../../reusable components/loader/loader';
 import { FormsModule, NgModel } from '@angular/forms';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-home-page',
   imports: [
@@ -49,7 +51,7 @@ export class HomePage {
 
     this.fetchEventsData();
   }
-  constructor(private eventService: Event) {}
+  constructor(private eventService: Event, private router: Router) {}
 
   // This function is called whenever the user types in the search box
   filterEvents(): void {
@@ -72,7 +74,9 @@ export class HomePage {
     this.currentPage = 1;
     this.updatePagination();
   }
-
+  GoToSchedulePage(): void {
+    this.router.navigate(['schedule']);
+  }
   updatePagination(): void {
     // HOW TOTAL PAGES ARE CALCULATED:
     // The total number of pages is calculated based on the CURRENT number of items
