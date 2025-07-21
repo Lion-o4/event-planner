@@ -1,0 +1,102 @@
+<div class="schedule-container">
+  <header class="main-header">
+    <h1 style="display: flex; align-items: center">
+      <img src="delhiLogo.svg" style="height: 100px" alt="IIT Delhi" /> IIT
+      Delhi UG Orientation Schedule 2025-26
+    </h1>
+  </header>
+
+  <nav class="view-switcher">
+    <button
+      (click)="setActiveTab('groups')"
+      [class.active]="activeTab === 'groups'"
+    >
+      👥 Student Groups
+    </button>
+    <button
+      (click)="setActiveTab('schedule')"
+      [class.active]="activeTab === 'schedule'"
+    >
+      📅 Student Schedule
+    </button>
+    <button
+      (click)="setActiveTab('parents')"
+      [class.active]="activeTab === 'parents'"
+    >
+      👨‍👩‍👧‍👦 Parents' Orientation
+    </button>
+  </nav>
+
+  <main>
+    <div *ngIf="activeTab === 'groups'" class="content-view">
+      <h2>Student Program Groups</h2>
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>Group A</h3>
+          <ul>
+            <li *ngFor="let program of groupA">
+              <strong>{{ program.code }}:</strong> {{ program.name }}
+            </li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3>Group B</h3>
+          <ul>
+            <li *ngFor="let program of groupB">
+              <strong>{{ program.code }}:</strong> {{ program.name }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="activeTab === 'parents'" class="content-view">
+      <h2>Parents' Orientation Sessions</h2>
+      <p class="date-subtitle">Tuesday, July 22, 2025</p>
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>Group A Parents (9:00 AM - 10:30 AM)</h3>
+          <ul>
+            <li *ngFor="let item of parentsGroupA">
+              {{ item.departments }}: <strong>{{ item.venue }}</strong>
+            </li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3>Group B Parents (11:30 AM - 1:00 PM)</h3>
+          <ul>
+            <li *ngFor="let item of parentsGroupB">
+              {{ item.departments }}: <strong>{{ item.venue }}</strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="activeTab === 'schedule'" class="content-view">
+      <div class="pdf-wrapper">
+        <iframe
+          src="schedule1.pdf"
+          width="100%"
+          height="800px"
+          title="UG Orientation Schedule PDF"
+        ></iframe>
+      </div>
+    </div>
+  </main>
+
+  <footer class="key-section">
+    <h3>💡 Key to Abbreviations</h3>
+    <ul>
+      <li><strong>Reg*</strong>: Registration in LH 121</li>
+      <li>
+        <strong>CT</strong>: Campus Tour with BSW Team (Meeting Point: LHC
+        Entrance)
+      </li>
+      <li>
+        <strong>LPT</strong>: Language Proficiency Test (Report 5 mins early to
+        LH 502)
+      </li>
+    </ul>
+  </footer>
+</div>

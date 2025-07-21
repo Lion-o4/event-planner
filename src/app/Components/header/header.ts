@@ -27,4 +27,7 @@ export class Header {
   GoToContactPage(): void {
     this.router.navigate(['Bucket-List']);
   }
+  GoToSchedulePage(): void {
+    this.router.navigate(['schedule']);
+  }
 }

@@ -21,4 +21,7 @@ export class Footer {
   GoToContactPage() {
     this.router.navigate(['Bucket-List']);
   }
+  GoToSchedulePage() {
+    this.router.navigate(['Schedule']);
+  }
 }
