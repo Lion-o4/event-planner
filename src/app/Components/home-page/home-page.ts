@@ -78,19 +78,16 @@ export class HomePage {
     this.router.navigate(['schedule']);
   }
   updatePagination(): void {
-    // HOW TOTAL PAGES ARE CALCULATED:
-    // The total number of pages is calculated based on the CURRENT number of items
-    // in the filteredEvents array.
-    // Math.ceil() rounds up to ensure we have a page for leftover items.
-    // Example 1 (Initial Load): 13 events / 12 per page = 1.08 -> Math.ceil -> 2 pages.
-    // Example 2 (Search for 'CS'): 10 events / 12 per page = 0.83 -> Math.ceil -> 1 page.
-
     this.totalPages = Math.ceil(this.newEventArr.length / this.itemsPerPage);
 
     // Now, we slice the filteredEvents array to get just the items for the current page.
     const startIndex = (this.currentPage - 1) * this.itemsPerPage;
     const endIndex = startIndex + this.itemsPerPage;
-    this.paginatedEvents = this.newEventArr.slice(startIndex, endIndex);
+    if (this.newEventArr.length <= this.itemsPerPage) {
+      this.paginatedEvents = [...this.newEventArr];
+    } else {
+      this.paginatedEvents = this.newEventArr.slice(startIndex, endIndex);
+    }
     this.canBeLoaded = true;
   }
 
