@@ -202,6 +202,9 @@ export class HomePage {
         this.featuredEventsArr = this.allEventArr.filter(
           (item: { isfeatured: string }) => item.isfeatured === 'yes'
         );
+        this.allEventArr.forEach((item: any) => {
+          this.labelArr.push(item.label);
+        });
 
         this.labelArr = [...new Set(this.labelArr)];
         this.newEventArr = this.allEventArr;
