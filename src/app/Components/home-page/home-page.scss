@@ -235,3 +235,16 @@ $gradient: linear-gradient(to right, #ff4e50, #f9d423);
   font-weight: 500;
   background-image: $gradient;
 }
+.report {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #ff4e50, #f9d423);
+  color: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  margin: 2rem auto;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1.3rem;
+}
